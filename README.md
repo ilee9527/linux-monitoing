@@ -1,5 +1,20 @@
 # linux-monitoing by docker prometheus
-use docker container to monitor linux usage and generate alert via email
+- this repo helps users to monitors their linux os and generate alerts by prometheus containers
+- however, prometheus is not the only application useful for monitoring and generating alerts
+- node-exporter is needed to get data from linux os
+- alertmanager is needed to set up outgoing alert server (i.e. mail)
+- grafana is used to visualize data from linux os by designing dashboard (can be obtained from grafana community)
+- reference:
+  - [prometheus config setting](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+  - [prometheus rule setting](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
+  - [alertmanager config setting](https://prometheus.io/docs/alerting/latest/configuration/)
+  
+
+# Prerequesite
+- basic knowledge of docker operation
+  - `docker-compose build && docker-compose up` to ini containers
+  - `docker exec -it <container> bash` to get inside containers file system
+  
 
 # docker containers
 - node-exporter
