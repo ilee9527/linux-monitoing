@@ -1,4 +1,4 @@
-# linux-monitoing
+# linux-monitoing by docker prometheus
 use docker container to monitor linux usage and generate alert via email
 
 # docker containers
