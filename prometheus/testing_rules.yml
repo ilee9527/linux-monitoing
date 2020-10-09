@@ -1,0 +1,11 @@
+groups:
+- name: example
+  rules:
+  - alert: highRAM
+    expr: ( 100 - ((node_memory_MemAvailable_bytes{instance="node-exporter:9100",job="ivan_linux_vm"} * 100) / node_memory_MemTotal_bytes{instance="node-exporter:9100",job="ivan_linux_vm"})) > 85 
+    for: 1m    
+    labels:
+      instance: "vm"
+    annotations:
+      summary: "Instace {{$labels.job}} Memory usage high"
+      description: " {{$labels.job}} Memory usage above > 85% (current value: {{ $value }})"
