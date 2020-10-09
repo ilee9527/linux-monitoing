@@ -8,6 +8,14 @@
   - [prometheus config setting](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
   - [prometheus rule setting](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
   - [alertmanager config setting](https://prometheus.io/docs/alerting/latest/configuration/)
+
+# commands
+- reload configuartion 
+  - `curl -s -XPOST localhost:9090/-/reload`
+- health check
+  - `curl -s -XGET localhost:9090/-/healthy`
+  - `curl -s -XGET localhost:9090/-/ready`
+
   
 
 # Prerequesite
