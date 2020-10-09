@@ -37,4 +37,4 @@
 # grafana
 - visualize metrics collected by prometheus from node-exporter
 - import dashboard from community
-- monitoring rules can reference dashboard
+- monitoring rules can reference dashboard design
