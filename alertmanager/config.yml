@@ -1,0 +1,27 @@
+global:
+  resolve_timeout: 5m
+  smtp_smarthost: <smtp host>
+  smtp_from: <non-reply@smtp>
+  smtp_auth_username: <smtp username>
+  smtp_auth_password: <smtp password>
+
+templates:
+  - default.tmpl
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 600s
+  receiver: 
+receivers:
+- name: <receiver name>
+  email_configs:
+  - to: <receive email>
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']
